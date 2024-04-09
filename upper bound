@@ -1,0 +1,18 @@
+public static int upperBound(int []arr, int x, int n){
+        // Write your code here.
+        int ans =n;
+        int day =0;
+        int nig = n-1 ;
+        while(day<=nig){
+            int eve = day + (nig- day)/2;
+            if(arr[eve]>x){
+                ans = eve;
+                nig = eve-1;
+
+            }
+            else 
+            day = eve+1;
+
+        }
+        return ans;
+    }
